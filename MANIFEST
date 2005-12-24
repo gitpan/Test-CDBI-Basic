@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Test-CDBI-Basic.t
+lib/Test/CDBI/Basic.pm
+META.yml                                 Module meta-data (added by MakeMaker)

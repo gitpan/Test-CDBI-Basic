@@ -1,0 +1,40 @@
+TITLE
+    Test::CDBI::Basic - Very basic testing of Class::DBI classes
+
+DESCRIPTION
+    Allows for quick and dirty testing of Class::DBI classes
+
+SYNOPSIS
+            use strict;
+            use warnings;
+
+            use Test::More tests => 31;
+            use Test::CDBI::Basic qw( test_class );
+            use Some::DBI::Class;
+
+            test_class( 'Sequins::DBI::Hit' );
+
+INTRODUCTION
+    This module does something very simple that I find myself doing whenever
+    I write tests for Class::DBI subclasses. It reads in the class, tries to
+    create a new object, and then goes through the columns, attempting to
+    assign the value of 1 to every column. It doesn't check if the column
+    was actually updated. Basically then, it allows you to check your column
+    definitions match reality. It won't attempt to assign a value to any
+    column set as a primary column. It does this in the most naive way
+    possible, and then tries to delete the object created.
+
+    It makes a call to "ok", however that's defined in the calling class,
+    when an object was created, and once for every column.
+
+FUNCTIONS
+  test_class
+    Accepts a class name and an optional list of arguments to be treated
+    like a hash to pass to your class's "create" method.
+
+AUTHOR
+    Peter Sergeant - "pete [a] clueball.com"
+
+LICENSE
+    As perl itself
+

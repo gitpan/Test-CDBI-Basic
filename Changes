@@ -1,0 +1,6 @@
+Revision history for Perl extension Test::CDBI::Basic.
+
+0.01  Sat Dec 24 15:04:45 2005
+	- original version; created by h2xs 1.9 with options
+		-AXc -n Test::CDBI::Basic
+
